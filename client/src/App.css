@@ -30,13 +30,21 @@
 }
 
 .Item-list {
-  list-style: none;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .Item-list li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   border: 1px dotted gray;
-  width: 20%;
-  height: 3em;
-  margin: auto;
-  text-align: left;
+  margin: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+.catPicture {
+  width: 100px;
 }
