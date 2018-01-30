@@ -12,7 +12,7 @@ cats: [Cat]    # "[]" means this is a list of cats
 Cat(id: ID!): Cat
 ```
 
-2. Implement the queries:
+3. Implement the queries:
 
 ```
 cats: () => {
@@ -24,7 +24,7 @@ Cat: (obj, args) => {
 ```
 Then you can test it out in Graphiql.
 
-3. Connect the query with front-end client.
+4. Connect the query with front-end client.
 
 ```
 export const catListQuery = gql`
