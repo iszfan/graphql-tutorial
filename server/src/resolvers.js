@@ -3,6 +3,7 @@ import {cats} from "./cats";
 
 let nextId = cats.length + 1;
 
+/** This returns a random cat pic url. */
 const getRandomCatPic = () => {
     const catPicLibrary = [
        "http://cache.lovethispic.com/uploaded_images/thumbs/210306-Cute-Cat.png",
@@ -25,6 +26,10 @@ const getRandomCatPic = () => {
     return catPicLibrary[Math.floor(Math.random()*catPicLibrary.length)];
 }
 
+/**
+ * The "meat" of queries and mutations!
+ * Here, you can customize what each query and mutation will return.
+ */
 export const resolvers = {
   Query: {
     cats: () => {
@@ -42,6 +47,15 @@ export const resolvers = {
     },
     deleteCat: (root, args) => {
       return cats.filter((cat) => cat.name !== args.name);
+    },
+    petCat: (root, args) => {
+      const catNameToPet = args.name;
+      cats.forEach((cat) => {
+          if (cat.name === catNameToPet) {
+             cat.cuteness += 1;
+          }
+      })
+      return cats;
     }
   },
 };

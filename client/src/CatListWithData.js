@@ -5,6 +5,7 @@ import gql from 'graphql-tag';
 import {graphql} from 'react-apollo';
 
 import AddCat from './AddCat';
+import "./CatListWithData.css";
 
 const CatList = ({data: {loading, error, cats}}) => {
    if (loading) {
@@ -15,8 +16,9 @@ const CatList = ({data: {loading, error, cats}}) => {
    }
    return <ol className="Item-list">
      {cats.map(cat => <li key={cat.id}>
-        {cat.name}
+        <div className="catName">{cat.name}</div>
         <img className="catPicture" src={cat.pictureSrc} alt={""}/>
+        <div className="cuteness">Cuteness: {cat.cuteness || "to be petted"}</div>
       </li>)}
       <li>
         <AddCat />
@@ -30,6 +32,7 @@ export const catListQuery = gql`
       id
       name
       pictureSrc
+      cuteness
     }
   }
 `;

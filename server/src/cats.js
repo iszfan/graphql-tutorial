@@ -1,43 +1,53 @@
 export const cats = [{
   id: "1",
   name: 'Meatball',
-  pictureSrc: "http://cache.lovethispic.com/uploaded_images/thumbs/210306-Cute-Cat.png"
+  pictureSrc: "http://cache.lovethispic.com/uploaded_images/thumbs/210306-Cute-Cat.png",
+  cuteness: 2
 }, {
   id: "2",
   name: 'Sushi',
-  pictureSrc: "http://www.supercutegrooming.com/images/stories/g2.png"
+  pictureSrc: "http://www.supercutegrooming.com/images/stories/g2.png",
+  cuteness: 4
 }, {
   id: "3",
   name: 'Miso',
-  pictureSrc: "http://www.stickpng.com/assets/images/5845e10e7733c3558233c0ea.png"
+  pictureSrc: "http://www.stickpng.com/assets/images/5845e10e7733c3558233c0ea.png",
+  cuteness: 5
 }, {
   id: "4",
   name: 'Kale',
-  pictureSrc: "https://i.imgur.com/YSLSWGc.png"
+  pictureSrc: "https://i.imgur.com/YSLSWGc.png",
+  cuteness: 6
 }, {
   id: "5",
   name: "Broccoli",
-  pictureSrc: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRb1IMzaskiswmEa2CPlYZ0cs8kIXHdhhSY0JG6vDMyPQNJ4vu"
+  pictureSrc: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRb1IMzaskiswmEa2CPlYZ0cs8kIXHdhhSY0JG6vDMyPQNJ4vu",
+  cuteness: 8
 }, {
   id: "6",
   name: "Eggwhite",
-  pictureSrc: "http://www.edrants.com/wp-content/uploads/2016/06/cat.png"
+  pictureSrc: "http://www.edrants.com/wp-content/uploads/2016/06/cat.png",
+  cuteness: 2
 }, {
   id: "7",
   name: "Bacon",
-  pictureSrc: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWmtzHf-Z4S3FabBAx5P42fcrjhd7XbvR88-89sMdI0Yx0pw43AA"
+  pictureSrc: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWmtzHf-Z4S3FabBAx5P42fcrjhd7XbvR88-89sMdI0Yx0pw43AA",
+  cuteness: 2
 }, {
   id: "8",
   name: "Oatmeal",
-  pictureSrc: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHMWsGyjWHGYGuxZW7UEU7BH-3gvei11YOD8M5Jt-pWWiujuh1Pw"
+  pictureSrc: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHMWsGyjWHGYGuxZW7UEU7BH-3gvei11YOD8M5Jt-pWWiujuh1Pw",
+  cuteness: 4
 }, {
   id: "9",
   name: "Cherry tomato",
-  pictureSrc: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQT7h86SosmrEFrYhz1U6HT1wMrDXCCFDTqQEtUWxh3cZkosoqi"
+  pictureSrc: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQT7h86SosmrEFrYhz1U6HT1wMrDXCCFDTqQEtUWxh3cZkosoqi",
+  cuteness: 9
 }, {
   id: "10",
   name: "Bamboo",
-  pictureSrc: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjFUAjbDhaP0-tZCEafOwkRO2K27SaYX-GrnEm6UI_DYNyNXPD"
+  pictureSrc: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjFUAjbDhaP0-tZCEafOwkRO2K27SaYX-GrnEm6UI_DYNyNXPD",
+  cuteness: 8
 }, {
   id: "11",
   name: "Honey",
