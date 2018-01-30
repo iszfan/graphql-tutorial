@@ -31,5 +31,3 @@ const AddCat = ({mutate}) => {
       />
   );
 };
-
-//TODO Step 3: connect mutation with front-end client
