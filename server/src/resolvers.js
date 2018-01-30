@@ -31,14 +31,6 @@ const getRandomCatPic = () => {
  */
 export const resolvers = {
   Query: {
-    cats: () => {
-      return cats;
-    },
-    Cat: (obj, args) => {
-      return cats.filter((cat) => cat.id === args.id)[0];
-    }
-  },
-  Mutation: {
-    //TODO Step 2: implement the mutation
-  },
+    //TODO Step 2: implement the queries
+  }
 };

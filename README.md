@@ -2,37 +2,41 @@
 ### created for GraphQL workshop at Northeastern University
 Modified based on https://github.com/apollographql/graphql-tutorial
 
-# How to create the addCat mutation
+# How to add Queries
 
-1. Define the schema:
+1. Add the data
+
+2. Define the schema:
 ```
-# A mutation to add a new cat to the list of cats
-addCat(name: String!): Cat
+cats: [Cat]    # "[]" means this is a list of cats
+Cat(id: ID!): Cat
 ```
 
-2. Implement the mutation:
+2. Implement the queries:
 
 ```
-addCat: (root, args) => {
-  const newCat = {id: nextId++, name: args.name, pictureSrc: getRandomCatPic()};
-  cats.push(newCat);
-  return newCat;
+cats: () => {
+  return cats;
+},
+Cat: (obj, args) => {
+  return cats.filter((cat) => cat.id === args.id)[0];
 }
 ```
 Then you can test it out in Graphiql.
 
-3. Connect the mutation with front-end client.
+3. Connect the query with front-end client.
 
 ```
-const addCatMutation = gql`
-  mutation addCat($name: String!) {
-    addCat(name: $name) {
+export const catListQuery = gql`
+  query CatListQuery {
+    cats {
       id
       name
+      pictureSrc
+      cuteness
     }
   }
 `;
+export const CatListWithData = graphql(catListQuery)(CatList);
 
-const AddCatWithMutation = graphql(addCatMutation)(AddCat);
-export default AddCatWithMutation;
 ```
