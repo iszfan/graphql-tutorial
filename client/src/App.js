@@ -21,7 +21,7 @@ class App extends Component {
           <div className="App">
             <header className="App-header">
               <img src={"https://vignette.wikia.nocookie.net/animaljam/images/d/d5/Nyan-cat_zps4adb5b0e.png/revision/latest?cb=20140627073036"} className="cat-logo" alt="logo" />
-              <h1 className="App-title">My Cat Inventory</h1>
+              <h1 className="App-title">My Virtual Cat Inventory</h1>
             </header>
             <CatListWithData />
           </div>

@@ -1,4 +1,3 @@
-// src/schema.js
 import {
   makeExecutableSchema,
   addMockFunctionsToSchema,
@@ -10,6 +9,7 @@ const typeDefs = `
      id: ID!                # "!" denotes a required field
      name: String
      pictureSrc: String
+     cuteness: Int
   }
   # This type specifies the entry points into our API. In this case
   # there is only one - "cats" - which returns a list of cats.
