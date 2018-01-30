@@ -47,6 +47,15 @@ export const resolvers = {
     },
     deleteCat: (root, args) => {
       return cats.filter((cat) => cat.name !== args.name);
+    },
+    petCat: (root, args) => {
+      const catNameToPet = args.name;
+      cats.forEach((cat) => {
+          if (cat.name === catNameToPet) {
+             cat.cuteness += 1;
+          }
+      })
+      return cats;
     }
   },
 };
