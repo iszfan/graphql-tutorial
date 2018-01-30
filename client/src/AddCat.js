@@ -9,6 +9,7 @@ const AddCat = ({mutate}) => {
   const handleKeyUp = (evt) => {
     if (evt.keyCode === 13) {
       evt.persist();
+      //Send the value to mutation
       mutate({
         variables: {
           name: evt.target.value
@@ -31,14 +32,4 @@ const AddCat = ({mutate}) => {
   );
 };
 
-const addCatMutation = gql`
-  mutation addCat($name: String!) {
-    addCat(name: $name) {
-      id
-      name
-    }
-  }
-`;
-
-const AddCatWithMutation = graphql(addCatMutation)(AddCat);
-export default AddCatWithMutation;
+//TODO Step 3: connect mutation with front-end client
