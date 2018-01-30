@@ -39,6 +39,10 @@ export const resolvers = {
     }
   },
   Mutation: {
-    //TODO Step 2: implement the mutation
-  },
+    addCat: (root, args) => {
+      const newCat = {id: nextId++, name: args.name, pictureSrc: getRandomCatPic()};
+      cats.push(newCat);
+      return newCat;
+    }
+  }
 };

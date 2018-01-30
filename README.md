@@ -13,10 +13,12 @@ addCat(name: String!): Cat
 2. Implement the mutation:
 
 ```
-addCat: (root, args) => {
-  const newCat = {id: nextId++, name: args.name, pictureSrc: getRandomCatPic()};
-  cats.push(newCat);
-  return newCat;
+type Mutation {
+  addCat: (root, args) => {
+    const newCat = {id: nextId++, name: args.name, pictureSrc: getRandomCatPic()};
+    cats.push(newCat);
+    return newCat;
+  }
 }
 ```
 Then you can test it out in Graphiql.

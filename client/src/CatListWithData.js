@@ -4,8 +4,8 @@ import React from 'react';
 import gql from 'graphql-tag';
 import {graphql} from 'react-apollo';
 
-import AddCat from './AddCat';
 import "./CatListWithData.css";
+import AddCat from "./AddCat.js";
 
 const CatList = ({data: {loading, error, cats}}) => {
    if (loading) {

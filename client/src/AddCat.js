@@ -32,4 +32,14 @@ const AddCat = ({mutate}) => {
   );
 };
 
-//TODO Step 3: connect mutation with front-end client
+const addCatMutation = gql`
+  mutation addCat($name: String!) {
+    addCat(name: $name) {
+      id
+      name
+    }
+  }
+`;
+
+const AddCatWithMutation = graphql(addCatMutation)(AddCat);
+export default AddCatWithMutation;
