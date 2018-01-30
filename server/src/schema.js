@@ -14,7 +14,8 @@ const typeDefs = `
   # This type specifies the entry points into our API. In this case
   # there is only one - "cats" - which returns a list of cats.
   type Query {
-     #TODO Step 2: define the schema
+    cats: [Cat]    # "[]" means this is a list of cats
+    Cat(id: ID!): Cat
   }
 `;
 

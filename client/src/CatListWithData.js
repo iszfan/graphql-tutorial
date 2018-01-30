@@ -22,4 +22,14 @@ const CatList = ({data: {loading, error, cats}}) => {
    </ol>;
 };
 
-//TODO Step 4: connect the query with front-end client.
+export const catListQuery = gql`
+  query CatListQuery {
+    cats {
+      id
+      name
+      pictureSrc
+      cuteness
+    }
+  }
+`;
+export const CatListWithData = graphql(catListQuery)(CatList);
