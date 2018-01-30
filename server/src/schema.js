@@ -21,6 +21,7 @@ const typeDefs = `
   type Mutation {
     # A mutation to add a new cat to the list of cats
     addCat(name: String!): Cat
+    deleteCat(name: String!): [Cat]
   }
 `;
 

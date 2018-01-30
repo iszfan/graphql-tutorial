@@ -1,7 +1,7 @@
 //in this file we’ll define how the schema should handle a channels query.
 import {cats} from "./cats";
 
-let nextId = cats.length+1;
+let nextId = cats.length + 1;
 
 const getRandomCatPic = () => {
     const catPicLibrary = [
@@ -36,9 +36,12 @@ export const resolvers = {
   },
   Mutation: {
     addCat: (root, args) => {
-      const newCat = { id: nextId++, name: args.name, pictureSrc: getRandomCatPic()};
+      const newCat = {id: nextId++, name: args.name, pictureSrc: getRandomCatPic()};
       cats.push(newCat);
       return newCat;
     },
+    deleteCat: (root, args) => {
+      return cats.filter((cat) => cat.name !== args.name);
+    }
   },
 };
