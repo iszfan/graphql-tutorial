@@ -39,6 +39,6 @@ export const resolvers = {
     }
   },
   Mutation: {
-    //TODO Step 2: implement the mutation
-  },
+    //TODO step 2: implement the mutation
+  }
 };

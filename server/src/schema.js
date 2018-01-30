@@ -14,13 +14,10 @@ const typeDefs = `
   # This type specifies the entry points into our API. In this case
   # there is only one - "cats" - which returns a list of cats.
   type Query {
-     cats: [Cat]    # "[]" means this is a list of cats
-     Cat(id: ID!): Cat
+    cats: [Cat]    # "[]" means this is a list of cats
+    Cat(id: ID!): Cat
   }
-  # The mutation root type, used to define all mutations.
-  type Mutation {
-    //TODO Step 1: define schema.
-  }
+  #TODO: step 1: define the schema
 `;
 
 const schema = makeExecutableSchema({typeDefs, resolvers});

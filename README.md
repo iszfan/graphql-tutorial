@@ -6,8 +6,10 @@ Modified based on https://github.com/apollographql/graphql-tutorial
 
 1. Define the schema:
 ```
-# A mutation to add a new cat to the list of cats
-addCat(name: String!): Cat
+type Mutation {
+  # A mutation to add a new cat to the list of cats
+  addCat(name: String!): Cat
+}
 ```
 
 2. Implement the mutation:
@@ -18,6 +20,7 @@ addCat: (root, args) => {
   cats.push(newCat);
   return newCat;
 }
+
 ```
 Then you can test it out in Graphiql.
 
